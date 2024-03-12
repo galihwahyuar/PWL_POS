@@ -10,17 +10,30 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = UserModel::firstOrNew(
-            [
+        $user = UserModel::firstOrCreate([
                 'username' => 'manager33',
                 'nama' => 'Manager Tiga Tiga',
                 'password' => Hash::make('12345'),
                 'level_id' => 2
             ],
         );
-        $user->save();
-        
-        return view('user', ['data' => $user]);
+        //$user->username = 'manager45';
+
+    //$user->isDirty(); //true
+    //$user->isDirty('username'); //true
+    //$user->isDirty('nama'); //false
+    //$user->isDirty(['nama', 'username']); //false
+
+    /*$user->isClean(); //true
+    $user->isClean('username'); //true
+    $user->isClean('nama'); //false
+    $user->isClean(['nama', 'username']); //false*/
+
+    //$user->save();
+
+    /*$user->isDirty();
+    $user->isClean();
+    dd($user->isDirty());*/
     }
 }   
 
@@ -29,3 +42,21 @@ class UserController extends Controller
 //$user = UserModel::where('level_id', 1)->first();
 //$user = UserModel::firstWhere('level_id', 1);
 //$user = UserModel::findOr(1,['username', 'nama'], function(){abort(404);*/
+
+    //$user->username = 'manager45';
+
+    //$user->isDirty(); //true
+    //$user->isDirty('username'); //true
+    //$user->isDirty('nama'); //false
+    //$user->isDirty(['nama', 'username']); //false
+
+    /*$user->isClean(); //true
+    $user->isClean('username'); //true
+    $user->isClean('nama'); //false
+    $user->isClean(['nama', 'username']); //false*/
+
+    //$user->save();
+
+    /*$user->isDirty();
+    $user->isClean();
+    dd($user->isDirty());*/
