@@ -14,7 +14,7 @@ class UserController extends Controller
         return view ('user', ['data' => $user]);
     }
 
-    public function tambah_simpan()
+    public function tambah_simpan(Request $request)
     {
         UserModel::create([
             'username' => $request->username,
