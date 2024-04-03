@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
 
@@ -8,7 +8,7 @@
       <div class="card-tools"></div>
     </div>
     <div class="card body">
-      Selamat datang semua, ini adalah halaman utama dari apalikasi ini..
+      Selamat datang semua, ini adalah halaman utama dari apalikasi ini.
     </div>
   </div>
 @endsection
